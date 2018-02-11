@@ -825,7 +825,10 @@ page = """C:\Users\Administrator\PycharmProjects\untitled\venv\Scripts\python.ex
 Process finished with exit code 0
 """
 
-pattern = re.compile('<h3 class="core_title_txt.*?>(.*?)</h3>', re.S)
-result = re.search(pattern, page)
-
-print result.group(1)
+# pattern = re.compile('<h3 class="core_title_txt.*?>(.*?)</h3>', re.S)
+# result = re.search(pattern, page)
+pattern = re.compile('<div id="post_content_.*?>(.*?)</div>',re.S)
+items = re.findall(pattern, page)
+# for item in items:
+#     print item
+print items[3]
