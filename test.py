@@ -831,4 +831,10 @@ pattern = re.compile('<div id="post_content_.*?>(.*?)</div>',re.S)
 items = re.findall(pattern, page)
 # for item in items:
 #     print item
+title = "小漏人倒萨倒萨倒萨打算"
+# title = unicode(title, "GB2312")
+if title is not None:
+    file = open(title + ".txt", "w+")
+else:
+    file = open(self.defaultTitle + ".txt", "w+")
 print items[3]
